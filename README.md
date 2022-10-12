@@ -5,8 +5,9 @@ Rename all files in a directory with random numbers.
 
 ## Usage
 
+- `git clone https://github.com/jNaimXIII/RandomFileRenames` - Clone the repository.
 - `mkdir -p ~/.local/bin` - Create local bin directory.
-- `cp ./src/rename_files.py ~/.local/bin` - Copy script to local bin.
+- `cp ./RandomFileRenames/src/rename_files.py ~/.local/bin` - Copy script to local bin.
 - `chmod +x ~/.local/bin/rename_files.py` - Make script executable.
 - `exec $SHELL` - Restart shell.
 - `rename_files.py <directory>` - Run script.
