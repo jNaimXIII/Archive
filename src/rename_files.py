@@ -3,29 +3,50 @@
 import os
 import sys
 import random
+import shutil
 
-args = sys.argv
+cli_args = sys.argv
 
-if len(args) < 2:
+if len(cli_args) < 2:
     raise Exception("missing arguments. <directory>")
 
-relative_directory_path = args[1]
-absolute_directory_path = os.path.abspath(relative_directory_path)
+relative_source_dir_path = cli_args[1]
+absolute_source_dir_path = os.path.abspath(relative_source_dir_path)
 
-original_files = os.listdir(absolute_directory_path)
-used_names = []
+relative_destination_dir_path = relative_source_dir_path
+absolute_destination_dir_path = absolute_source_dir_path
 
-for original_file in original_files:
-    random_number = random.randint(1_000_000, 9_999_999)
-    while random_number in used_names:
-        random_number = random.randint(1_000_000, 9_999_999)
+if len(cli_args) == 3:
+    relative_destination_dir_path = cli_args[2]
+    absolute_destination_dir_path = os.path.abspath(relative_destination_dir_path)
 
-    extension = ""
-    if original_file.find("."):
-        extension = original_file[original_file.rindex('.'):]
+source_file_names = os.listdir(absolute_source_dir_path)
+used_file_names = []
+used_file_names.extend(source_file_names)
 
-    renamed_file = str(random_number) + extension
 
-    original_path = os.path.join(absolute_directory_path, original_file)
-    renamed_path = os.path.join(absolute_directory_path, renamed_file)
-    os.rename(original_path, renamed_path)
+def name_generator(used_names):
+    random_int_name = str(random.randint(1_000_000, 9_999_999))
+
+    while random_int_name in used_names:
+        random_int_name = str(random.randint(1_000_000, 9_999_999))
+
+    return random_int_name
+
+
+for source_file_name in source_file_names:
+    generated_name = name_generator(used_file_names)
+
+    file_extension = ""
+    if source_file_name.find("."):
+        file_extension = source_file_name[source_file_name.rindex('.'):]
+
+    renamed_file_name = generated_name + file_extension
+
+    source_file_path = os.path.join(absolute_source_dir_path, source_file_name)
+    destination_file_path = os.path.join(absolute_destination_dir_path, renamed_file_name)
+
+    if absolute_source_dir_path == absolute_destination_dir_path:
+        os.rename(source_file_path, destination_file_path)
+    else:
+        shutil.copy(source_file_path, destination_file_path)
