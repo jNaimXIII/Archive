@@ -13,3 +13,4 @@ Rename all files in a directory with random numbers.
 - `rename_files.py <directory>` - Run script.
 
 > NOTE: `~/.local/bin` needs to be in `$PATH` for you to run the script.
+> NOTE: These are Linux / MacOS only instructions.
