@@ -17,11 +17,12 @@ importers:
       '@types/node': ^18.0.0
       '@types/tap': ^15.0.5
       concurrently: ^7.0.0
+      eslint-config-jtrack: workspace:*
       fastify: ^4.0.0
       fastify-cli: ^5.6.0
       fastify-plugin: ^4.0.0
-      fastify-tsconfig: ^1.0.1
       tap: ^16.1.0
+      ts-config-jtrack: workspace:*
       ts-node: ^10.4.0
       typescript: ^4.5.4
     dependencies:
@@ -34,8 +35,9 @@ importers:
       '@types/node': 18.11.9
       '@types/tap': 15.0.7
       concurrently: 7.6.0
-      fastify-tsconfig: 1.0.1
+      eslint-config-jtrack: link:../../packages/eslint-config-jtrack
       tap: 16.3.2_2dtigtkb225m7ii7q45utxqwgi
+      ts-config-jtrack: link:../../packages/ts-config-jtrack
       ts-node: 10.9.1_wup25etrarvlqkprac7h35hj7u
       typescript: 4.9.3
 
@@ -44,9 +46,11 @@ importers:
       '@types/react': ^18.0.24
       '@types/react-dom': ^18.0.8
       '@vitejs/plugin-react': ^2.2.0
+      eslint-config-jtrack: workspace:*
       eslint-plugin-react: ^7.31.11
       react: ^18.2.0
       react-dom: ^18.2.0
+      ts-config-jtrack: workspace:*
       typescript: ^4.6.4
       vite: ^3.2.3
     dependencies:
@@ -56,7 +60,9 @@ importers:
       '@types/react': 18.0.25
       '@types/react-dom': 18.0.9
       '@vitejs/plugin-react': 2.2.0_vite@3.2.4
+      eslint-config-jtrack: link:../../packages/eslint-config-jtrack
       eslint-plugin-react: 7.31.11
+      ts-config-jtrack: link:../../packages/ts-config-jtrack
       typescript: 4.9.3
       vite: 3.2.4
 
@@ -71,6 +77,12 @@ importers:
       eslint-config-prettier: 8.5.0_eslint@8.28.0
       eslint-config-turbo: 0.0.4_eslint@8.28.0
       typescript: 4.9.3
+
+  packages/ts-config-jtrack:
+    specifiers:
+      fastify-tsconfig: ^1.0.1
+    devDependencies:
+      fastify-tsconfig: 1.0.1
 
 packages:
 
