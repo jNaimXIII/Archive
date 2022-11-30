@@ -1,8 +1,5 @@
 {
-	"extends": "fastify-tsconfig/tsconfig.json",
-	"compilerOptions": {
-		"outDir": "dist",
-		"sourceMap": true
-	},
-	"include": ["src/**/*.ts"]
+	"extends": "ts-config-jtrack/api.json",
+	"include": ["src/**/*.ts"],
+	"exclude": ["node_modules"]
 }

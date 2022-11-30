@@ -1,0 +1,12 @@
+{
+	"name": "ts-config-jtrack",
+	"description": "TypeScript configuration for jTrack.",
+	"version": "0.0.1",
+	"files": [
+		"react.json",
+		"api.json"
+	],
+	"devDependencies": {
+		"fastify-tsconfig": "^1.0.1"
+	}
+}
