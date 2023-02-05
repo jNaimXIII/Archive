@@ -1,0 +1,13 @@
+.*
+
+!.gitignore
+
+!.prettierrc.json
+!.prettierignore
+!.eslintrc.json
+!.eslintignore
+
+!.vscode/
+
+node_modules/
+dist/
