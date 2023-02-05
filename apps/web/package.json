@@ -1,0 +1,27 @@
+{
+	"name": "web",
+	"description": "jTrack web app.",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"lint": "eslint",
+		"build": "tsc && vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@types/react": "^18.0.24",
+		"@types/react-dom": "^18.0.8",
+		"@vitejs/plugin-react": "^2.2.0",
+		"typescript": "^4.6.4",
+		"vite": "^3.2.3",
+		"eslint-plugin-react": "^7.31.11",
+		"eslint-config-jtrack": "workspace:*",
+		"ts-config-jtrack": "workspace:*"
+	}
+}

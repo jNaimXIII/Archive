@@ -1,0 +1,14 @@
+{
+	"name": "eslint-config-jtrack",
+	"description": "ESLint configuration for jTrack.",
+	"version": "0.0.1",
+	"files": [
+		"base.json"
+	],
+	"devDependencies": {
+		"eslint": "^8.28.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-config-turbo": "^0.0.4",
+		"typescript": "^4.6.4"
+	}
+}

@@ -1,0 +1,11 @@
+.*
+
+!.gitignore
+
+!.prettierrc.json
+!.prettierignore
+!.eslintrc.json
+!.eslintignore
+
+node_modules/
+dist/

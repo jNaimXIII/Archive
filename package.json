@@ -1,0 +1,15 @@
+{
+	"name": "jtrack",
+	"description": "Get ahead of your tasks with jTrack.",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "turbo run dev --parallel",
+		"format": "prettier --write .",
+		"lint": "turbo run lint",
+		"build": "turbo run build"
+	},
+	"devDependencies": {
+		"prettier": "^2.8.0",
+		"turbo": "^1.6.3"
+	}
+}
