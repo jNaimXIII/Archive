@@ -1,5 +1,0 @@
-{
-	"extends": "ts-config-jtrack/api.json",
-	"include": ["src/**/*.ts"],
-	"exclude": ["node_modules"]
-}
